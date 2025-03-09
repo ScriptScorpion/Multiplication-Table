@@ -2,8 +2,8 @@ use std::io;
 
 fn main() {
     // 1. Запрашиваем число у пользователя
+    println!("hello user");
     println!("Enter a number: ");
-
     // 2. Создаем строковую переменную для хранения ввода пользователя
     let mut input = String::new();
 
@@ -11,7 +11,7 @@ fn main() {
     io::stdin()
         .read_line(&mut input)
         .expect("Failed to read line");
-
+    
     // 4. Преобразуем строку в число (i32)
     let number: i32 = match input.trim().parse() {
         Ok(num) => num,
